@@ -54,6 +54,9 @@ streamlit run app.py
 
 (Note: dataset not included in repo — download from the Kaggle link above and place in a `data/` folder as `bikes_raw.csv` before running the notebooks.)
 
+🔗 **[Try the live app here](https://bike-price-prediction-o7x8ffmrbgty6n4qfwwpzv.streamlit.app/)**
+
+
 ## 📈 Future Improvements
 
 - Scrape fresh listings from OLX for a self-collected, current dataset
