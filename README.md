@@ -33,9 +33,15 @@ Used bike buyers and sellers in India often lack a reliable way to estimate a fa
 | Random Forest | 0.92 | ₹14,066 | 17.2% |
 | **XGBoost (final)** | **0.93** | **₹13,387** | **16.0%** |
 
+Additionally, trained two **quantile regression models** (XGBoost, 10th and 90th percentile) to estimate a fair price range for any given bike, enabling automatic detection of over/underpriced listings — achieved ~73% calibration against the theoretical 80% target.
+
 ## 🖥️ Demo
 
-Built an interactive Streamlit app where users input bike details (brand, city, owner, age, kms driven, power) and get an instant price estimate.
+Built an interactive Streamlit app with two features:
+- **Price Predictor** — enter bike details (brand, city, owner, age, kms driven, power) and get an instant price estimate along with a fair price range
+- **Deal Checker** — enter a listed price for a bike and get an instant verdict (Underpriced / Fair Price / Overpriced) based on quantile regression models trained on the 10th and 90th percentile price distributions
+
+🔗 **[Try the live app here](https://bike-price-prediction-o7x8ffmrbgty6n4qfwwpzv.streamlit.app/)**
 
 ## 🛠️ Tech Stack
 
@@ -54,7 +60,6 @@ streamlit run app.py
 
 (Note: dataset not included in repo — download from the Kaggle link above and place in a `data/` folder as `bikes_raw.csv` before running the notebooks.)
 
-🔗 **[Try the live app here](https://bike-price-prediction-o7x8ffmrbgty6n4qfwwpzv.streamlit.app/)**
 
 
 ## 📈 Future Improvements
